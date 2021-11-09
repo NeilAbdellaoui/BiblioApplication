@@ -1,5 +1,5 @@
 package com.company;
-
+// pour contourner les restrictions de retour de type (Admin & admingestionuser)
 public class ReturningTowTypes {
 	
 	    public  User u;

@@ -13,7 +13,7 @@ import java.sql.Statement;
 public class Admin  extends User {
 
 	public Admin(int i, String n, String p, String a, String f, String e, String pass, String l, int ph) {
-		  super(i,n, p, a, f, e, pass, l, ph);
+		  super(i,n, p, a, f, e, pass, l, ph); //appelle le constructeur de la classe paraent
 		// TODO Auto-generated constructor stub
 	}
 public Admin() {
@@ -50,7 +50,7 @@ public void  AjouterUser(NormalUser u) throws SQLException {
 	} catch (SQLException e) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
-		JOptionPane.showMessageDialog(null,"Numero d'utilisateur existe deja   ");
+		JOptionPane.showMessageDialog(null,"Numero d'utilisateur existe deja");
 	}
 	
 	 con.close();
@@ -301,7 +301,7 @@ Connection con = connection.ConnecrDb();
      
       pstmt.setInt(1, u.getCategorie().getId_categorie());
       pstmt.setInt(2, u.getId());
-       pstmt.executeUpdate();
+	  pstmt.executeUpdate();
 
        pstmt.close();
        con.close();
